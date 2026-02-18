@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+
+<Layout title="MyChileTour - Tours y Traslados en Chile" description="Expertos en tours y traslados por todo Chile. Experiencias inolvidables con el más alto nivel de servicio.">
+  <Hero
+    title="Descubre Chile con Nosotros"
+    subtitle="Tours inolvidables y traslados seguros por todo Chile. Tu aventura comienza aquí."
+  />
+
+  <!-- Servicios Destacados -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Nuestros Servicios
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Ofrecemos una variedad de tours y servicios de traslado para que tu experiencia en Chile sea inolvidable
+      </p>
+    </div>
+
+    <!-- Grid de servicios de ejemplo -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <!-- Servicios de ejemplo - serán reemplazados con contenido real en Fase 4 -->
+      <ServiceCard
+        title="City Tour Santiago"
+        description="Recorre los principales atractivos de Santiago en un tour guiado completo por la capital."
+        price={50000}
+        duration="4 horas"
+        capacity={8}
+        slug="city-tour-santiago"
+        category="tour"
+      />
+      <ServiceCard
+        title="Viña del Mar & Valparaíso"
+        description="Visita las ciudades más emblemáticas de la costa chilena con guía experto."
+        price={75000}
+        duration="8 horas"
+        capacity={8}
+        slug="vina-valparaiso"
+        category="tour"
+      />
+      <ServiceCard
+        title="Traslado Aeropuerto"
+        description="Servicio de traslado desde y hacia el aeropuerto con conductores profesionales."
+        price={25000}
+        duration="1 hora"
+        capacity={4}
+        slug="traslado-aeropuerto"
+        category="traslado"
+      />
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <a
+        href="/servicios"
+        class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      >
+        Ver todos los servicios
+      </a>
+    </div>
+  </section>
+
+  <!-- Por qué elegirnos -->
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          ¿Por qué elegirnos?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Seguridad Garantizada</h3>
+          <p class="text-gray-600">
+            Vehículos modernos y conductores profesionales certificados para tu tranquilidad.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Puntualidad</h3>
+          <p class="text-gray-600">
+            Respetamos tu tiempo. Llegamos siempre a la hora acordada.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Experiencia Única</h3>
+          <p class="text-gray-600">
+            Guías expertos que harán de tu tour una experiencia inolvidable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Imágenes de ejemplo con placeholders de placehold.co
+const galeriaImages = [
+  {
+    src: 'https://placehold.co/800x600/2563eb/white?text=Tour+Santiago',
+    alt: 'Tour por Santiago',
+    category: 'tour',
+    title: 'City Tour Santiago'
+  },
+  {
+    src: 'https://placehold.co/800x600/1e40af/white?text=Vina+del+Mar',
+    alt: 'Viña del Mar',
+    category: 'tour',
+    title: 'Viña del Mar'
+  },
+  {
+    src: 'https://placehold.co/800x600/0891b2/white?text=Valparaiso',
+    alt: 'Valparaíso',
+    category: 'tour',
+    title: 'Valparaíso'
+  },
+  {
+    src: 'https://placehold.co/800x600/059669/white?text=Traslado',
+    alt: 'Traslado aeropuerto',
+    category: 'traslado',
+    title: 'Servicio de traslado'
+  },
+  {
+    src: 'https://placehold.co/800x600/047857/white?text=Vehiculos',
+    alt: 'Vehículos modernos',
+    category: 'vehiculos',
+    title: 'Nuestra flota'
+  },
+  {
+    src: 'https://placehold.co/800x600/7c2d12/white?text=Clientes',
+    alt: 'Clientes felices',
+    category: 'pasajeros',
+    title: 'Experiencias únicas'
+  }
+];
+
+const categorias = [
+  { value: 'all', label: 'Todas' },
+  { value: 'tour', label: 'Tours' },
+  { value: 'traslado', label: 'Traslados' },
+  { value: 'vehiculos', label: 'Vehículos' },
+  { value: 'pasajeros', label: 'Pasajeros' }
+];
+---
+
+<Layout
+  title="Galería - MyChileTour"
+  description="Descubre nuestros tours, vehículos y las experiencias de nuestros clientes a través de nuestra galería de imágenes."
+>
+  <!-- Header section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Galería</h1>
+      <p class="text-xl text-gray-100 max-w-2xl">
+        Descubre la belleza de Chile a través de nuestros tours y experiencias
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="bg-white border-b sticky top-16 z-40">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex flex-wrap gap-2">
+        {categorias.map((cat, index) => (
+          <button
+            data-category={cat.value}
+            class={`filter-btn px-4 py-2 rounded-lg font-medium transition-colors ${
+              index === 0
+                ? 'bg-blue-600 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="container mx-auto px-4 py-16">
+    <div id="image-count" class="mb-8">
+      <p class="text-gray-600">
+        <span id="count-number">{galeriaImages.length}</span>
+        <span id="count-text">imágenes</span>
+      </p>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {galeriaImages.map((image) => (
+        <div data-category={image.category} class="gallery-item group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="aspect-w-4 aspect-h-3 bg-gray-200">
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+              <h3 class="text-lg font-bold">{image.title}</h3>
+              <p class="text-sm text-gray-200">{image.alt}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Mensaje cuando no hay imágenes -->
+    <div id="no-images" class="hidden text-center py-16">
+      <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">
+        No hay imágenes en esta categoría
+      </h2>
+      <p class="text-gray-600 mb-8">
+        Prueba con otra categoría.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        ¿Listo para tu próxima aventura?
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Descubre nuestros servicios y comienza a planear tu experiencia perfecta en Chile
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/servicios"
+          class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Ver servicios
+        </a>
+        <a
+          href="/contacto"
+          class="inline-block border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+        >
+          Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Filtrado de galería con JavaScript
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  const countNumber = document.getElementById('count-number');
+  const countText = document.getElementById('count-text');
+  const noImagesMsg = document.getElementById('no-images');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+
+      // Actualizar botones activos
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      });
+      button.classList.remove('bg-gray-100', 'text-gray-700');
+      button.classList.add('bg-blue-600', 'text-white');
+
+      // Filtrar imágenes
+      let visibleCount = 0;
+      galleryItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // Actualizar contador
+      if (countNumber && countText) {
+        countNumber.textContent = visibleCount;
+        countText.textContent = visibleCount === 1 ? 'imagen' : 'imágenes';
+      }
+
+      // Mostrar mensaje si no hay imágenes
+      if (noImagesMsg) {
+        if (visibleCount === 0) {
+          noImagesMsg.classList.remove('hidden');
+        } else {
+          noImagesMsg.classList.add('hidden');
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Lazy load optimization */
+  img {
+    content-visibility: auto;
+  }
+</style>
