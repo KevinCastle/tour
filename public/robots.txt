@@ -1,0 +1,12 @@
+# robots.txt para MyChileTour
+
+# Permitir a todos los bots
+User-agent: *
+Allow: /
+
+# Bloquear admin de Tina CMS
+Disallow: /admin/
+Disallow: /admin
+
+# Sitemap
+Sitemap: https://mychiletour.com/sitemap-index.xml

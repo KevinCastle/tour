@@ -51,6 +51,14 @@ images/
 - Vehículos
 - Clientes felices
 
+### Open Graph por Defecto (og-default.jpg)
+
+Imagen que se usa en redes sociales cuando se comparte el sitio:
+- **Tamaño**: 1200x630px (formato Open Graph estándar)
+- **Contenido sugerido**: Logo de MyChileTour + paisaje de Chile o collage de tours
+- **Formato**: JPG o PNG
+- **Ubicación**: `/public/images/og-default.jpg`
+
 ## Placeholders Temporales
 
 Actualmente, los servicios usan URLs de placeholder de https://placehold.co.

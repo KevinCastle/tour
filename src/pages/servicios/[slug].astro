@@ -31,7 +31,30 @@ const categoryLabels = {
 <Layout
   title={`${servicio.data.title} - MyChileTour`}
   description={servicio.data.description}
+  image={servicio.data.images[0]}
 >
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": servicio.data.category === 'tour' ? "TouristAttraction" : "Service",
+    "name": servicio.data.title,
+    "description": servicio.data.description,
+    "image": servicio.data.images,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "MyChileTour",
+      "url": "https://mychiletour.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": servicio.data.price,
+      "priceCurrency": "CLP",
+      "availability": "https://schema.org/InStock"
+    },
+    "duration": servicio.data.duration,
+    "maximumAttendeeCapacity": servicio.data.capacity
+  })} />
+
   <!-- Breadcrumb -->
   <div class="bg-gray-50 border-b">
     <div class="container mx-auto px-4 py-4">

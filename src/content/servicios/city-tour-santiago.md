@@ -1,24 +1,24 @@
 ---
-title: "City Tour Santiago"
-description: "Recorre los principales atractivos de Santiago en un tour guiado completo por la capital de Chile."
+title: City Tour Santiago
+description: Recorre los principales atractivos de Santiago en un tour guiado completo por la capital de Chile.
 price: 50000
-duration: "4 horas"
+duration: 4 horas
 capacity: 8
 images:
-  - "https://placehold.co/1200x800/2563eb/white?text=City+Tour+Santiago"
-  - "https://placehold.co/1200x800/1e40af/white?text=Palacio+La+Moneda"
-  - "https://placehold.co/1200x800/1e3a8a/white?text=Cerro+San+Cristobal"
+  - 'https://placehold.co/1200x800/2563eb/white?text=City+Tour+Santiago'
+  - 'https://placehold.co/1200x800/1e40af/white?text=Palacio+La+Moneda'
+  - 'https://placehold.co/1200x800/1e3a8a/white?text=Cerro+San+Cristobal'
 includes:
-  - "Transporte en vehículo moderno y cómodo"
-  - "Guía turístico profesional en español"
-  - "Entrada al Cerro San Cristóbal"
-  - "Seguro de viaje"
-  - "Agua embotellada"
+  - Transporte en vehículo moderno y cómodo
+  - Guía turístico profesional en español
+  - Entrada al Cerro San Cristóbal
+  - Seguro de viaje
+  - Agua embotellada
 excludes:
-  - "Alimentos y bebidas no mencionadas"
-  - "Propinas (opcional)"
-  - "Gastos personales"
-category: "tour"
+  - Alimentos y bebidas no mencionadas
+  - Propinas (opcional)
+  - Gastos personales
+category: tour
 featured: true
 ---
 
@@ -45,11 +45,11 @@ Descubre el colorido barrio artístico de Santiago, conocido por su vida nocturn
 
 ### Información Adicional
 
-- **Punto de encuentro**: Tu hotel en Santiago (servicio de recogida incluido)
-- **Horarios disponibles**: Mañana (9:00 AM) o Tarde (2:00 PM)
-- **Idioma**: Español (inglés disponible bajo solicitud)
-- **Dificultad**: Baja - Apto para todas las edades
-- **Vestimenta recomendada**: Ropa cómoda, zapatos para caminar, protector solar
+* **Punto de encuentro**: Tu hotel en Santiago (servicio de recogida incluido)
+* **Horarios disponibles**: Mañana (9:00 AM) o Tarde (2:00 PM)
+* **Idioma**: Español (inglés disponible bajo solicitud)
+* **Dificultad**: Baja - Apto para todas las edades
+* **Vestimenta recomendada**: Ropa cómoda, zapatos para caminar, protector solar
 
 ### ¿Por qué elegir este tour?
 
