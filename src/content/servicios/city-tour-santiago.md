@@ -5,9 +5,12 @@ price: 50000
 duration: 4 horas
 capacity: 8
 images:
-  - 'https://placehold.co/1200x800/2563eb/white?text=City+Tour+Santiago'
-  - 'https://placehold.co/1200x800/1e40af/white?text=Palacio+La+Moneda'
-  - 'https://placehold.co/1200x800/1e3a8a/white?text=Cerro+San+Cristobal'
+  - "/images/services/CityTour/1.jpg"
+  - "/images/services/CityTour/2.jpg"
+  - "/images/services/CityTour/3.jpg"
+  - "/images/services/CityTour/4.jpg"
+  - "/images/services/CityTour/5.jpg"
+  - "/images/services/CityTour/6.jpg"
 includes:
   - Transporte en vehículo moderno y cómodo
   - Guía turístico profesional en español

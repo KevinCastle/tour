@@ -61,7 +61,7 @@ Por defecto, los mensajes se envían al email con el que te registraste en Web3F
 En `src/pages/contacto.astro`, busca esta línea:
 
 ```astro
-<input type="hidden" name="subject" value="Nuevo mensaje desde MyChileTour" />
+<input type="hidden" name="subject" value="Nuevo mensaje desde TransferChileTour" />
 ```
 
 Cámbiala al asunto que prefieras.
@@ -71,7 +71,7 @@ Cámbiala al asunto que prefieras.
 Actualmente, después de enviar el formulario, el sitio redirige a la misma página con un parámetro `?success=true`. Si quieres cambiar esto:
 
 ```astro
-<input type="hidden" name="redirect" value="https://mychiletour.com/gracias" />
+<input type="hidden" name="redirect" value="https://transferchiletour.com/gracias" />
 ```
 
 Y crea una página `/gracias` para agradecer al usuario.

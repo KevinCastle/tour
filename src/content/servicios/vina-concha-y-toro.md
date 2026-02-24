@@ -1,6 +1,6 @@
 ---
 title: "Viña Concha y Toro"
-description: "Nos internaremos en el Maipo Alto, para conocer el origen, historia y presente de la viña chilena más reconocida en el mundo. La historia del vino chileno comienza en el siglo XVI, cuando los conquistadores españoles trajeron las primeras cepas. El Tour comienza con un entretenido recorrido por el exterior del parque, y la casona de verano de la Familia Concha y Toro hacia fines del siglo XIX, y sorprende con la famosa bodega "Casillero del Diablo", junto a su singular leyenda."
+description: "Nos internaremos en el Maipo Alto, para conocer el origen, historia y presente de la viña chilena más reconocida en el mundo. La historia del vino chileno comienza en el siglo XVI, cuando los conquistadores españoles trajeron las primeras cepas. El Tour comienza con un entretenido recorrido por el exterior del parque, y la casona de verano de la Familia Concha y Toro hacia fines del siglo XIX, y sorprende con la famosa bodega “Casillero del Diablo”, junto a su singular leyenda."
 price: 0
 duration: "Por confirmar"
 capacity: 8

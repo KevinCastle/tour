@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Indomita/1.jpg"
-  - "/images/services/Indomita/2.jpg"
-  - "/images/services/Indomita/3.jpg"
 includes:
   - "Transporte Privado"
   - "Botella de Agua"

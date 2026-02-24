@@ -1,4 +1,4 @@
-# Imágenes del Proyecto MyChileTour
+# Imágenes del Proyecto TransferChileTour
 
 Esta carpeta contiene todas las imágenes del sitio web.
 
@@ -55,7 +55,7 @@ images/
 
 Imagen que se usa en redes sociales cuando se comparte el sitio:
 - **Tamaño**: 1200x630px (formato Open Graph estándar)
-- **Contenido sugerido**: Logo de MyChileTour + paisaje de Chile o collage de tours
+- **Contenido sugerido**: Logo de TransferChileTour + paisaje de Chile o collage de tours
 - **Formato**: JPG o PNG
 - **Ubicación**: `/public/images/og-default.jpg`
 

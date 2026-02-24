@@ -1,4 +1,4 @@
-# robots.txt para MyChileTour
+# robots.txt para TransferChileTour
 
 # Permitir a todos los bots
 User-agent: *
@@ -9,4 +9,4 @@ Disallow: /admin/
 Disallow: /admin
 
 # Sitemap
-Sitemap: https://mychiletour.com/sitemap-index.xml
+Sitemap: https://transferchiletour.com/sitemap-index.xml

@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Colorado/1.jpg"
-  - "/images/services/Colorado/2.jpg"
-  - "/images/services/Colorado/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

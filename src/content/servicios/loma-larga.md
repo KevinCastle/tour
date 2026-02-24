@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/LomaLarga/1.jpg"
-  - "/images/services/LomaLarga/2.jpg"
-  - "/images/services/LomaLarga/3.jpg"
 includes:
   - "Transporte Privado"
   - "Botella de Agua"

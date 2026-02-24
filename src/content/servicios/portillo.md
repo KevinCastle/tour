@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Portillo/1.jpg"
-  - "/images/services/Portillo/2.jpg"
-  - "/images/services/Portillo/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

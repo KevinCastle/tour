@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Parva/1.jpg"
-  - "/images/services/Parva/2.jpg"
-  - "/images/services/Parva/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

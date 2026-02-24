@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/ValleNevado/1.jpg"
-  - "/images/services/ValleNevado/2.jpg"
-  - "/images/services/ValleNevado/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

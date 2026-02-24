@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Enjoy/1.jpg"
-  - "/images/services/Enjoy/2.jpg"
-  - "/images/services/Enjoy/3.jpg"
 includes:
   - "Transporte Privado"
   - "Duración 3 horas"

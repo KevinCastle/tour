@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/BaliHai/1.jpg"
-  - "/images/services/BaliHai/2.jpg"
-  - "/images/services/BaliHai/3.jpg"
 includes:
   - "Transporte Privado"
   - "Entrada (4 alternativas)"

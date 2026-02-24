@@ -8,6 +8,7 @@ images:
   - "/images/services/Matetic/1.jpg"
   - "/images/services/Matetic/2.jpg"
   - "/images/services/Matetic/3.jpg"
+  - "/images/services/Matetic/4.jpg"
 includes:
   - "Transporte Privado"
   - "Botella de Agua"

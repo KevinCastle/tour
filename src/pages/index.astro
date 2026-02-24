@@ -2,9 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+
+// Obtener todos los servicios y filtrar solo los destacados
+const todosLosServicios = await getCollection('servicios');
+const serviciosDestacados = todosLosServicios.filter(servicio => servicio.data.featured === true);
 ---
 
-<Layout title="MyChileTour - Tours y Traslados en Chile" description="Expertos en tours y traslados por todo Chile. Experiencias inolvidables con el más alto nivel de servicio.">
+<Layout title="TransferChileTour - Tours y Traslados en Chile" description="Expertos en tours y traslados por todo Chile. Experiencias inolvidables con el más alto nivel de servicio.">
   <Hero
     title="Descubre Chile con Nosotros"
     subtitle="Tours inolvidables y traslados seguros por todo Chile. Tu aventura comienza aquí."
@@ -21,36 +26,20 @@ import ServiceCard from '../components/ServiceCard.astro';
       </p>
     </div>
 
-    <!-- Grid de servicios de ejemplo -->
+    <!-- Grid de servicios destacados -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      <!-- Servicios de ejemplo - serán reemplazados con contenido real en Fase 4 -->
-      <ServiceCard
-        title="City Tour Santiago"
-        description="Recorre los principales atractivos de Santiago en un tour guiado completo por la capital."
-        price={50000}
-        duration="4 horas"
-        capacity={8}
-        slug="city-tour-santiago"
-        category="tour"
-      />
-      <ServiceCard
-        title="Viña del Mar & Valparaíso"
-        description="Visita las ciudades más emblemáticas de la costa chilena con guía experto."
-        price={75000}
-        duration="8 horas"
-        capacity={8}
-        slug="vina-valparaiso"
-        category="tour"
-      />
-      <ServiceCard
-        title="Traslado Aeropuerto"
-        description="Servicio de traslado desde y hacia el aeropuerto con conductores profesionales."
-        price={25000}
-        duration="1 hora"
-        capacity={4}
-        slug="traslado-aeropuerto"
-        category="traslado"
-      />
+      {serviciosDestacados.map(servicio => (
+        <ServiceCard
+          title={servicio.data.title}
+          description={servicio.data.description}
+          price={servicio.data.price}
+          duration={servicio.data.duration}
+          capacity={servicio.data.capacity}
+          image={servicio.data.images[0]}
+          slug={servicio.slug}
+          category={servicio.data.category}
+        />
+      ))}
     </div>
 
     <!-- CTA -->

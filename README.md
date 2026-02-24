@@ -1,6 +1,6 @@
-# MyChileTour - Landing Page
+# TransferChileTour - Landing Page
 
-Landing page profesional para MyChileTour, empresa de tours y traslados en Chile. Construida con Astro, Tailwind CSS y Tina CMS.
+Landing page profesional para TransferChileTour, empresa de tours y traslados en Chile. Construida con Astro, Tailwind CSS y Tina CMS.
 
 ![Astro](https://img.shields.io/badge/Astro-5.17-BC52EE?logo=astro)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-06B6D4?logo=tailwindcss)
@@ -113,7 +113,7 @@ Edita `src/pages/contacto.astro` y actualiza:
 ```javascript
 const contactInfo = {
   phone: '+56 9 XXXX XXXX',
-  email: 'info@mychiletour.com',
+  email: 'info@transferchiletour.com',
   whatsapp: '+56 9 XXXX XXXX',
   address: 'Santiago, Chile',
   hours: 'Lun - Dom: 7:00 - 22:00'
@@ -179,7 +179,7 @@ Sigue las instrucciones y agrega las variables de entorno cuando se soliciten.
 ### Paso 4: Configurar Dominio Personalizado (Opcional)
 
 1. En tu proyecto de Vercel, ve a "Settings" → "Domains"
-2. Agrega tu dominio (ej: mychiletour.com)
+2. Agrega tu dominio (ej: transferchiletour.com)
 3. Vercel te dará nameservers:
    ```
    ns1.vercel-dns.com
@@ -192,7 +192,7 @@ Sigue las instrucciones y agrega las variables de entorno cuando se soliciten.
 
 ### Paso 5: Verificar que todo funciona
 
-1. **Sitio web**: Abre tu URL de Vercel (ej: mychiletour.vercel.app)
+1. **Sitio web**: Abre tu URL de Vercel (ej: transferchiletour.vercel.app)
 2. **Tina CMS**: Ve a `https://tudominio.com/admin`
    - Login con GitHub
    - Edita un servicio de prueba
@@ -316,7 +316,7 @@ Ver "Deploy a Producción" → "Paso 2: Configurar Tina Cloud"
 
 ## 📄 Licencia
 
-Este proyecto es privado y propiedad de MyChileTour.
+Este proyecto es privado y propiedad de TransferChileTour.
 
 ## 🙏 Créditos
 

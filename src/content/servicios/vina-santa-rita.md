@@ -1,6 +1,6 @@
 ---
 title: "Viña Santa Rita"
-description: "Este Tour comienza en los viñedos del Maipo Alto, para luego recorrer las bodegas de vinificación, guarda y planta de embotellamiento. Se visita la histórica "Bodega de Cal y Canto", y bodega de los "120 Patriotas" hoy monumento nacional."
+description: "Este Tour comienza en los viñedos del Maipo Alto, para luego recorrer las bodegas de vinificación, guarda y planta de embotellamiento. Se visita la histórica “Bodega de Cal y Canto”, y bodega de los “120 Patriotas” hoy monumento nacional."
 price: 0
 duration: "Por confirmar"
 capacity: 8
@@ -8,6 +8,8 @@ images:
   - "/images/services/SantaRita/1.jpg"
   - "/images/services/SantaRita/2.jpg"
   - "/images/services/SantaRita/3.jpg"
+  - "/images/services/SantaRita/4.jpg"
+  - "/images/services/SantaRita/5.jpg"
 includes:
   - "Duración (3 horas aprox.)"
   - "Copa de regalo de la Viña"

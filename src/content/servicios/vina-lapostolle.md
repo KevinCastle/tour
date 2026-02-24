@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Lapostolle/1.jpg"
-  - "/images/services/Lapostolle/2.jpg"
-  - "/images/services/Lapostolle/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Monticello/1.jpg"
-  - "/images/services/Monticello/2.jpg"
-  - "/images/services/Monticello/3.jpg"
 includes:
   - "Transporte Privado"
   - "Duración 3 horas"

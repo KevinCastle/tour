@@ -8,6 +8,9 @@ images:
   - "/images/services/Valparaiso/1.jpg"
   - "/images/services/Valparaiso/2.jpg"
   - "/images/services/Valparaiso/3.jpg"
+  - "/images/services/Valparaiso/4.jpg"
+  - "/images/services/Valparaiso/5.jpg"
+  - "/images/services/Valparaiso/6.jpg"
 includes:
   - "Full Day 7 horas"
   - "Transporte Privado"

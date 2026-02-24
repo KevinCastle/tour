@@ -6,8 +6,6 @@ duration: "Por confirmar"
 capacity: 8
 images:
   - "/images/services/Montes/1.jpg"
-  - "/images/services/Montes/2.jpg"
-  - "/images/services/Montes/3.jpg"
 includes:
   - "Full Day"
   - "Transporte Privado"

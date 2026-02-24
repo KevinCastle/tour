@@ -1,8 +1,8 @@
-# Plan: Sitio Web MyChileTour - Landing Page con CMS
+# Plan: Sitio Web TransferChileTour - Landing Page con CMS
 
 ## Contexto
 
-Crear una landing page para **"mychiletour"**, una empresa de transporte y turismo en Chile que ofrece:
+Crear una landing page para **"transferchiletour"**, una empresa de transporte y turismo en Chile que ofrece:
 - Tours turísticos
 - Traslados aeropuerto/oficina
 - Servicios de formalidades
@@ -114,7 +114,7 @@ Crear una landing page para **"mychiletour"**, una empresa de transporte y turis
 ## Estructura del Proyecto
 
 ```
-mychiletour/
+transferchiletour/
 ├── src/
 │   ├── pages/
 │   │   ├── index.astro           # Home (hero, servicios destacados)
@@ -277,7 +277,7 @@ mychiletour/
 7. Cambios publicados en producción
 
 ### Opción 2: Edición en Producción (Más simple)
-1. Cliente accede directamente a `https://mychiletour.com/admin`
+1. Cliente accede directamente a `https://transferchiletour.com/admin`
 2. Login con GitHub
 3. Edita contenido con preview visual
 4. Guarda → commit automático → deploy automático
@@ -398,7 +398,7 @@ mychiletour/
 - Subir código a GitHub
 - Conectar repositorio con Vercel
 - Configurar variables de entorno para Tina CMS
-- Configurar dominio personalizado (mychiletour.com o similar)
+- Configurar dominio personalizado (transferchiletour.com o similar)
 - Configurar autenticación de Tina con GitHub OAuth
 - Pruebas finales en producción
 - Configurar Web Analytics de Vercel (opcional)
@@ -500,7 +500,7 @@ Deberás crear una guía simple (con screenshots) que explique:
    - Lista de servicios a mostrar
    - Textos de cada servicio
    - Imágenes (mínimo 3-4 por servicio)
-   - Logo de mychiletour
+   - Logo de transferchiletour
    - Colores de marca (si existen)
 4. **Iniciar desarrollo**: Fase 1-8
 
