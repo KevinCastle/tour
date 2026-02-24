@@ -1,0 +1,409 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+
+// Obtener contenido de empresas
+const empresasContent = await getEntry("pages", "empresas");
+
+if (!empresasContent) {
+  throw new Error("Contenido de empresas no encontrado");
+}
+
+const { data, body } = empresasContent;
+---
+
+<Layout
+  title={`${data.title} - TransferChileTour`}
+  description="Servicios de transporte ejecutivo y corporativo para empresas. Más de 40 años de experiencia brindando soluciones de movilidad profesional."
+>
+  <!-- Hero Corporativo -->
+  <section
+    class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white py-24 overflow-hidden"
+  >
+    <!-- Patrón de fondo -->
+    <div class="absolute inset-0 opacity-10">
+      <div
+        class="absolute inset-0"
+        style="background-image: url('data:image/svg+xml,%3Csvg width=\"
+        60\"
+        height='\"60\"'
+        viewBox='\"0'
+        0
+        60
+        60\"
+        xmlns='\"http://www.w3.org/2000/svg\"%3E%3Cg'
+        fill='\"none\"'
+        fill-rule='\"evenodd\"%3E%3Cg'
+        fill='\"%23ffffff\"'
+        fill-opacity='\"1\"%3E%3Cpath'
+        d='\"M36'
+        34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6
+        34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6
+        4V0H4v4H0v2h4v4h2V6h4V4H6z\"
+        %3E%3C
+        g%3E%3C
+        g%3E%3C
+        svg%3E');"
+      >
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-2 mb-6"
+        >
+          <svg
+            class="w-5 h-5 text-blue-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+            ></path>
+          </svg>
+          <span class="text-blue-200 font-semibold">OPAZO Y RIQUELME LTDA</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          {data.heroTitle}
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          {data.heroSubtitle}
+        </p>
+
+        <!-- Stats -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 max-w-3xl mx-auto"
+        >
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+          >
+            <div class="text-4xl font-bold text-blue-300 mb-2">
+              {data.yearsInBusiness}+
+            </div>
+            <div class="text-gray-300">Años de Experiencia</div>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+          >
+            <div class="text-4xl font-bold text-blue-300 mb-2">100%</div>
+            <div class="text-gray-300">Clientes Satisfechos</div>
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+          >
+            <div class="text-4xl font-bold text-blue-300 mb-2">24/7</div>
+            <div class="text-gray-300">Disponibilidad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Corporativos -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Servicios para Empresas
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Soluciones de transporte diseñadas específicamente para las
+          necesidades corporativas
+        </p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+      >
+        {
+          data.services.map((service: string) => (
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all">
+              <div class="flex items-start gap-4">
+                <div class="bg-blue-600 text-white p-3 rounded-lg flex-shrink-0">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 text-lg">{service}</h3>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Historia y Valores -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Historia -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-blue-600 text-white p-3 rounded-lg">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Nuestra Historia</h2>
+          </div>
+          <div class="prose prose-lg text-gray-600 whitespace-pre-line">
+            {data.history}
+          </div>
+        </div>
+
+        <!-- Valores -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">
+            Nuestros Valores
+          </h2>
+          {
+            data.values.map((value: any) => (
+              <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-600">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  {value.title}
+                </h3>
+                <p class="text-gray-600">{value.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo y Vehículos -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- Equipo -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-green-600 text-white p-3 rounded-lg">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Nuestro Equipo</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Conductores profesionales que garantizan excelencia en cada
+            servicio:
+          </p>
+          <ul class="space-y-4">
+            {
+              data.teamFeatures.map((feature: string) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <!-- Vehículos -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-blue-600 text-white p-3 rounded-lg">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">Nuestros Vehículos</h2>
+          </div>
+          <p class="text-gray-600 mb-6">
+            Flota moderna que cumple con todas las normativas vigentes:
+          </p>
+          <ul class="space-y-4">
+            {
+              data.vehicleFeatures.map((feature: string) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section
+    class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white"
+  >
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Empresas que Confían en Nosotros
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Prestamos servicios a empresas líderes en diversos sectores
+        </p>
+      </div>
+
+      <!-- Grid de logos -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-12"
+      >
+        {
+          data.clientLogos.map((client: any) => (
+            <div class="bg-white rounded-xl p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+              <img
+                src={client.logo}
+                alt={`Logo ${client.name}`}
+                class="w-full h-20 object-contain filter grayscale hover:grayscale-0 transition-all"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <p class="text-center text-gray-400 text-lg">
+        Y muchas más empresas de diversos sectores industriales y de servicios
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">
+          ¿Listo para Mejorar la Movilidad de tu Empresa?
+        </h2>
+        <p class="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
+          Contáctanos hoy y descubre cómo podemos optimizar el transporte
+          corporativo de tu organización
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={data.ctaLink}
+            class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            {data.ctaText}
+          </a>
+          <a
+            href="tel:+56996230278"
+            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center gap-2"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              ></path>
+            </svg>
+            Llamar Ahora
+          </a>
+        </div>
+
+        <!-- Info de empresa -->
+        <div class="mt-12 pt-8 border-t border-blue-400/30">
+          <p class="text-gray-200 mb-2">
+            <span class="font-semibold">{data.companyName}</span> ({
+              data.tradeName
+            })
+          </p>
+          <p class="text-gray-300 text-sm">
+            RUT: {data.rut} | Fundada en {data.foundedYear}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

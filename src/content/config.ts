@@ -16,6 +16,36 @@ const serviciosCollection = defineCollection({
     }),
 });
 
+const pagesCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        heroTitle: z.string(),
+        heroSubtitle: z.string(),
+        companyName: z.string(),
+        tradeName: z.string(),
+        rut: z.string(),
+        foundedYear: z.number(),
+        yearsInBusiness: z.number(),
+        history: z.string(),
+        services: z.array(z.string()),
+        values: z.array(z.object({
+            title: z.string(),
+            description: z.string(),
+            icon: z.string(),
+        })),
+        teamFeatures: z.array(z.string()),
+        vehicleFeatures: z.array(z.string()),
+        clientLogos: z.array(z.object({
+            name: z.string(),
+            logo: z.string(),
+        })),
+        ctaText: z.string(),
+        ctaLink: z.string(),
+    }),
+});
+
 export const collections = {
     servicios: serviciosCollection,
+    pages: pagesCollection,
 };

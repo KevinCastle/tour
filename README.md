@@ -78,7 +78,7 @@ tour/
 │   │   ├── servicios/
 │   │   │   ├── index.astro       # Lista de servicios
 │   │   │   └── [slug].astro      # Detalle de servicio
-│   │   ├── galeria.astro
+│   │   ├── empresas.astro
 │   │   ├── contacto.astro
 │   │   └── admin.astro     # Redirect a Tina admin
 │   └── styles/
