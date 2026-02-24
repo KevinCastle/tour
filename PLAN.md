@@ -379,18 +379,15 @@ transferchiletour/
 
 ---
 
-### Fase 7: Formulario de Contacto
-- Formulario HTML en página de contacto
-- Integración con **Web3Forms** o **Formspree** (gratuitos, funcionan con Vercel)
-  - Web3Forms: 250 envíos/mes gratis, sin registro de cuenta
-  - Formspree: 50 envíos/mes gratis, requiere cuenta
-- Validación del lado del cliente (HTML5 + JavaScript)
-- Mensaje de confirmación
-- Opcional: Notificación por email al cliente
+### Fase 7: Contacto por WhatsApp
+- Botón de contacto directo por WhatsApp en página de contacto
+- Mensaje predefinido: "Hola! Estoy interesado en sus servicios"
+- Diseño atractivo con gradiente verde
+- Lista de beneficios de usar WhatsApp
+- URL format: `https://wa.me/56996230278?text=Hola!%20Estoy%20interesado%20en%20sus%20servicios`
 
 **Archivos clave:**
 - `src/pages/contacto.astro`
-- `src/components/ContactForm.astro`
 
 ---
 
@@ -452,7 +449,7 @@ transferchiletour/
 - **Desarrollo inicial**: [Tu tarifa]
 - **Hosting**: $0/mes (Vercel Hobby plan)
 - **Tina CMS**: $0/mes (Community tier, hasta 2 usuarios)
-- **Formulario de contacto**: $0/mes (Web3Forms: 250 envíos/mes gratis)
+- **Contacto**: $0/mes (WhatsApp integrado, sin costos adicionales)
 - **Dominio**: ~$12-15/año (.com) o ~$25/año (.cl)
 - **Mantenimiento**: Mínimo (opcional)
 

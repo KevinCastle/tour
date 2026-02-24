@@ -12,10 +12,11 @@ Landing page profesional para TransferChileTour, empresa de tours y traslados en
 - ✅ **Tailwind CSS v4** para estilos modernos
 - ✅ **Tina CMS** para gestión de contenido visual
 - ✅ **SEO Optimizado** (meta tags, structured data, sitemap)
-- ✅ **Formulario de contacto** funcional con Web3Forms
+- ✅ **Contacto por WhatsApp** integrado para respuesta inmediata
+- ✅ **Página de Empresas** con diseño corporativo profesional
 - ✅ **Responsive Design** para móviles, tablets y desktop
-- ✅ **4 secciones**: Home, Servicios, Galería, Contacto
-- ✅ **100% gratuito para hostear** (Vercel + Tina Cloud + Web3Forms)
+- ✅ **4 secciones**: Home, Servicios, Empresas, Contacto
+- ✅ **100% gratuito para hostear** (Vercel + Tina Cloud)
 
 ## 📋 Requisitos Previos
 
@@ -24,7 +25,6 @@ Landing page profesional para TransferChileTour, empresa de tours y traslados en
 - Cuenta de **GitHub** (para Tina CMS y deploy)
 - Cuenta de **Vercel** (gratuita)
 - Cuenta de **Tina Cloud** (gratuita, tier Community)
-- Cuenta de **Web3Forms** (gratuita, 250 envíos/mes)
 
 ## 🛠 Instalación Local
 
@@ -89,24 +89,12 @@ tour/
 ├── astro.config.mjs        # Configuración de Astro
 ├── package.json
 ├── PLAN.md                 # Plan completo del proyecto
-├── WEB3FORMS_SETUP.md      # Instrucciones para Web3Forms
 └── README.md               # Este archivo
 ```
 
 ## ⚙️ Configuración
 
-### 1. Configurar Web3Forms (Formulario de Contacto)
-
-1. Crea cuenta en https://web3forms.com
-2. Obtén tu Access Key del dashboard
-3. Edita `src/pages/contacto.astro`:
-   ```astro
-   <input type="hidden" name="access_key" value="TU_ACCESS_KEY" />
-   ```
-
-Ver [WEB3FORMS_SETUP.md](WEB3FORMS_SETUP.md) para instrucciones detalladas.
-
-### 2. Configurar información de contacto
+### 1. Configurar información de contacto
 
 Edita `src/pages/contacto.astro` y actualiza:
 
@@ -197,8 +185,9 @@ Sigue las instrucciones y agrega las variables de entorno cuando se soliciten.
    - Login con GitHub
    - Edita un servicio de prueba
    - Verifica que los cambios se guardan
-3. **Formulario**: Envía un mensaje de prueba
-   - Verifica que recibes el email en tu inbox de Web3Forms
+3. **Contacto por WhatsApp**: Haz clic en el botón de WhatsApp
+   - Verifica que abre WhatsApp correctamente
+   - Verifica que el mensaje predefinido aparece
 
 ## 📊 Scripts Disponibles
 
@@ -300,18 +289,17 @@ Necesitas configurar las variables de entorno de Tina Cloud. En desarrollo local
 
 Ver "Deploy a Producción" → "Paso 2: Configurar Tina Cloud"
 
-### Formulario no envía emails
+### WhatsApp no abre en móvil
 
-1. Verifica que configuraste el Access Key de Web3Forms
-2. Revisa que el email en Web3Forms esté verificado
-3. Mira la consola del navegador para errores
+1. Verifica que el número de WhatsApp esté correctamente configurado en `src/pages/contacto.astro`
+2. Asegúrate de que el número incluya el código de país (+56 para Chile)
+3. El enlace debe tener el formato: `https://wa.me/56XXXXXXXXX?text=Mensaje`
 
 ## 📞 Soporte
 
 - **Astro**: https://docs.astro.build
 - **Tina CMS**: https://tina.io/docs
 - **Tailwind CSS**: https://tailwindcss.com/docs
-- **Web3Forms**: https://docs.web3forms.com
 - **Vercel**: https://vercel.com/docs
 
 ## 📄 Licencia
